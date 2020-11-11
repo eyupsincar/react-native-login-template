@@ -2,50 +2,52 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import {
   StyleSheet,
-  View,
   Text,
   TextInput,
   Image,
   TouchableOpacity,
 } from 'react-native';
 
+import Box from '../components/box';
+
 function Login() {
   return (
-    <View style={styles.container}>
 
-    {/*
-
-
-
-
-      */}
-
-      <View style={styles.container}>
+      <Box style={styles.container}>
       {/* header */}
-          <View style={styles.half}>
+          <Box style={styles.half}>
+          <Text style={styles.textsStyle}>React-Native</Text>
 
-          </View>
+
+          </Box>
       {/* body */}
-          <View style={styles.quarter}>
-            <TextInput style={styles.input}
-              placeholder="U S E R N A M E"
-            />
-            <TextInput style={styles.input}
-              placeholder="P A S S W O R D"
-            />
-            <TouchableOpacity style={styles.buttons}>
-              <Text style={styles.textStyles}>Register</Text>
-            </TouchableOpacity>
-          </View>
+          <Box style={styles.quarter}>
+              <TouchableOpacity>
+                <Text style={{color: "#8d9195",}}>Don't have an account? Sign up</Text>
+              </TouchableOpacity>
+            <TextInput
+              textAlign={'center'}
+              style={styles.input}
+              placeholder="U S E R N A M E" />
+            <TextInput
+              textAlign={'center'}
+              style={styles.input}
+              placeholder="P A S S W O R D" />
+
+              <Box mt={10}>
+                <TouchableOpacity>
+                  <Text  style={{color: "#8d9195", paddingLeft:210 }}>Forgot password?</Text>
+                </TouchableOpacity>
+              </Box>
+          </Box>
       {/* foot */}
-          <View style={[styles.quarter2]}>
-              <View>
+          <Box style={[styles.quarter2]}>
+              <Box>
                 <Image source={require('../icons/react.png')} />
-              </View>
-              <Text>Designed And Produced By Eyyüp Sincar</Text>
-          </View>
-      </View>
-    </View>
+              </Box>
+              <Text style={{color: "#8d9195"}}>Designed And Produced By Eyyüp Sincar</Text>
+          </Box>
+      </Box>
   )
 };
 
@@ -53,38 +55,41 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column",
+    backgroundColor: '#f9f9f9',
   },
 
   half: {
-     flex: 0.15, // veya .5
-     backgroundColor: '#f9f9f9',
+     flex: 0.15,
+     justifyContent: 'center',
+     alignItems: 'center',
  },
  quarter: {
-   flex: 0.70, // veya .25
-   backgroundColor: '#f9f9f9',
+   flex: 0.70,
    justifyContent: 'center',
    alignItems: 'center',
  },
  quarter2: {
-   flex: 0.15, // veya .25
-   backgroundColor: '#f9f9f9',
+   flex: 0.15,
    justifyContent: 'center',
    alignItems: 'center',
  },
   input: {
     marginTop:15,
-    backgroundColor: '#cef0fa',
+    backgroundColor: '#e4eaf1',
     width: 325,
     height:50,
     borderRadius: 10,
-    fontSize: 25,
-    paddingLeft:75,
+    fontSize: 19,
   },
 
   textsStyle: {
+    fontSize: 35,
+    opacity: 0.90,
+    color: '#8d9195',
     justifyContent: 'center',
     alignItems: 'center',
   },
+
 });
 
 export default Login;

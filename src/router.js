@@ -9,7 +9,6 @@ import Start from './pages/Start';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
-
 const AppSwitchNavigator = createSwitchNavigator(
   {
     Start: {
@@ -20,7 +19,7 @@ const AppSwitchNavigator = createSwitchNavigator(
     },
     Register: {
       screen : Register
-    }
+    },
   },
   {
     initialRouteName: 'Login'
