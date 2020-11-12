@@ -20,6 +20,7 @@ const AppSwitchNavigator = createSwitchNavigator(
     Register: {
       screen : Register
     },
+
   },
   {
     initialRouteName: 'Login'

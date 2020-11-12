@@ -9,6 +9,7 @@ import {
             borderRadius,
               border,
                 background,
+                opacity,
               } from 'styled-system';
 
 const Box = styled(View)(compose(
@@ -19,6 +20,7 @@ const Box = styled(View)(compose(
           size,
             borderRadius,
               background,
+              opacity,
             ));
 
 export default Box;
