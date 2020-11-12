@@ -12,13 +12,10 @@ import Box from './box';
 
 function Input() {
   return(
-    <Box>
       <Text
         color='#8d9195'
-        opacity={0.90}
-        justifyContent='center'
-        alignItems= 'center'> </Text>
-    </Box>
+        opacity={0.90} />
+
   )
 }
 

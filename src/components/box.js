@@ -20,7 +20,7 @@ const Box = styled(View)(compose(
           size,
             borderRadius,
               background,
-              opacity,
+                opacity,
             ));
 
 export default Box;

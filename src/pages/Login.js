@@ -10,6 +10,7 @@ import {
 
 import Input from '../components/Input';
 import Box from '../components/box';
+import Button from '../components/Button';
 
 function Login() {
   return (
@@ -20,14 +21,14 @@ function Login() {
         backgroundColor='#f9f9f9'>
       {/* header */}
           <Box
-            flex={0.15}
+            flex={0.35}
             justifyContent='center'
             alignItems='center'>
-            <Text style={styles.textsStyle}>React-Native</Text>
+              <Text style={{fontSize: 35 ,opacity: 0.90, color: '#8d9195',}}>React-Native</Text>
           </Box>
       {/* body */}
           <Box
-            flex={0.70}
+            flex={0.50}
             justifyContent='center'
             alignItems='center'>
           {/* sign up */}
@@ -39,9 +40,15 @@ function Login() {
                 <Input placeholder="P A S S W O R D" />
           {/* forgot password */}
               <Box mt={10}>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Forgot.js')}>
                   <Text  style={{color: "#8d9195", paddingLeft:210 }}>Forgot password?</Text>
                 </TouchableOpacity>
+              </Box>
+              <Box>
+                <Button mt={10}>
+                  <Text style={{color: '#8d9195', fontSize: 17}}>L O G İ N</Text>
+                </Button>
               </Box>
           </Box>
 
@@ -60,16 +67,5 @@ function Login() {
       </Box>
   )
 };
-
-const styles = StyleSheet.create({
-
-  textsStyle: {
-    fontSize: 35,
-    opacity: 0.90,
-    color: '#8d9195',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
 
 export default Login;
