@@ -1,10 +1,10 @@
-import React from 'react';
-import 'react-native-gesture-handler';
+import React from "react";
+import "react-native-gesture-handler";
 import {
   StyleSheet,
   View,
   Text,
-} from 'react-native';
+} from "react-native";
 
 function Register() {
   return (

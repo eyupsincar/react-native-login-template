@@ -1,23 +1,24 @@
-import React from 'react';
-import 'react-native-gesture-handler';
+import "react-native-gesture-handler";
+import React from "react";
 import {
   createSwitchNavigator,
   createAppContainer,
-} from 'react-native';
+} from "react-navigation";
 
 import Start from './pages/Start';
-import Login from './pages/Login';
+import Login from './pages/Login'
 import Register from './pages/Register';
 import Forgot from './pages/Forgot';
 
-const AppSwitchNavigator = createSwitchNavigator(
+const Router = createSwitchNavigator(
   {
+    Login: {
+      screen : ({navigation}) => <Login />
+    },
     Start: {
       screen : Start
     },
-    Login: {
-      screen : Login
-    },
+
     Register: {
       screen : Register
     },
@@ -30,5 +31,4 @@ const AppSwitchNavigator = createSwitchNavigator(
   }
 );
 
-
-export default createAppContainer(AppSwitchNavigator)
+export default createAppContainer(Router);

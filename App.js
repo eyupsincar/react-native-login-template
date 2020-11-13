@@ -1,23 +1,29 @@
-import 'react-native-gesture-handler';
-import React from 'react';
+import React, {useState}  from "react";
+import "react-native-gesture-handler";
 import {
-  NavigationContainer,
-  StyleSheet,
-  View,
-} from 'react-native';
+  StyleSheet, Text
+} from "react-native";
 
+import Box from './src/components/Box';
 import Router from './src/router';
-
+// localstorage a ait kontrolleri bu kisma yazacagiz.
 function App() {
+
+  const [user, setUser] = useState(0);
+  // mantik: kullanici girisi yapilmis mi kullanici girisi zaten varsa usestate kullanilarak kullanici propunu veri olarak guncelle.
+
   return(
-    <NavigationContainer>
-      <View style={styles.container}>
-        <Router />
-      </View>
-    </NavigationContainer>
+      <Box style={styles.container}>
+      {!user ? <Router routerHandler={
+        {
+          handler: () => {},
+          hello: "world"
+        }
+
+      } /> : <Text>Anasayfa yuklenecek</Text>}
+      </Box>
   )
 };
-
 
 const styles = StyleSheet.create({
   container: {
@@ -25,5 +31,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
 });
+
+
 
 export default App;

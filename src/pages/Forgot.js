@@ -1,12 +1,13 @@
-import React from 'react';
-import 'react-native-gesture-handler';
+import React from "react";
+import "react-native-gesture-handler";
 import {
   StyleSheet,
   View,
   Text,
-} from 'react-native';
+} from "react-native";
 
-function Forgot() {
+function Forgot({navigation}) {
+  console.log(navigation.getParam('data'))
   return (
     <View>
       <Text>Forgot.js dosyasındasın</Text>

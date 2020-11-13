@@ -11,9 +11,14 @@
     "svgr": "svgr ./src/icons -d ./src/icons --native --icon --svg-props width=24,height=24,className"
   },
   "dependencies": {
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/native": "^5.8.9",
     "react": "16.13.1",
     "react-native": "0.63.3",
     "react-native-gesture-handler": "^1.8.0",
+    "react-native-reanimated": "^1.13.1",
+    "react-native-safe-area-context": "^3.1.9",
+    "react-native-screens": "^2.14.0",
     "react-navigation": "^4.4.3",
     "styled-components": "^5.2.1",
     "styled-system": "^5.1.5"
