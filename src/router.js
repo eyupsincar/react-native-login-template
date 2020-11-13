@@ -13,7 +13,7 @@ import Forgot from './pages/Forgot';
 const Router = createSwitchNavigator(
   {
     Login: {
-      screen : ({navigation}) => <Login />
+      screen : Login
     },
     Start: {
       screen : Start
