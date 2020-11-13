@@ -9,6 +9,7 @@ import Start from './pages/Start';
 import Login from './pages/Login'
 import Register from './pages/Register';
 import Forgot from './pages/Forgot';
+import Home from './pages/Home';
 
 const Router = createSwitchNavigator(
   {
@@ -24,6 +25,9 @@ const Router = createSwitchNavigator(
     },
     Forgot: {
       screen : Forgot
+    },
+    Home: {
+      screen : Home
     },
   },
   {

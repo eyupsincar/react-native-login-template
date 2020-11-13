@@ -27,8 +27,6 @@ Button.defaultProps = {
     backgroundColor: "#e4eaf1",
     alignItems: 'center',
     justifyContent: 'center',
-    width: 175,
-    height: 45,
     borderRadius: 10,
 };
 

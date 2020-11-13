@@ -10,17 +10,12 @@ import Router from './src/router';
 function App() {
 
   const [user, setUser] = useState(0);
+
   // mantik: kullanici girisi yapilmis mi kullanici girisi zaten varsa usestate kullanilarak kullanici propunu veri olarak guncelle.
 
   return(
       <Box style={styles.container}>
-      {!user ? <Router routerHandler={
-        {
-          handler: () => {},
-          hello: "world"
-        }
-
-      } /> : <Text>Anasayfa yuklenecek</Text>}
+      {!user ? <Router props={user} /> : <Text>Anasayfa yuklenecek</Text>}
       </Box>
   )
 };
